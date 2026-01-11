@@ -8,9 +8,6 @@ import (
 func main() {
 	integers := make([]int, 0)
 	var usrInput int
-	ran := []int{1, 2, 3, 4, -1, 0}
-	BubbleSort(ran)
-	fmt.Println("Blaaaaaaa: ", ran)
 	
 	fmt.Println("Program starting")
 	for i := 0; i < 10; i++ {
@@ -18,7 +15,21 @@ func main() {
 		fmt.Scan(&usrInput)
 		integers = append(integers, usrInput)
 	}
-	fmt.Println("final Slice of integers: ", integers)
+
+	fmt.Println()
+	fmt.Println("Unsorted Slice of integers: ")
+	for _, v := range integers {
+		fmt.Print(v, " ")
+	}
+
+	BubbleSort(integers)
+	
+	fmt.Println()
+	fmt.Println()
+	fmt.Println("Sorted Slice of integers: ")
+	for _, v := range integers {
+		fmt.Print(v, " ")
+	}
 }
 
 func BubbleSort(numbers []int) {
