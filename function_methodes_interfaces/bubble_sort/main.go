@@ -10,7 +10,7 @@ func main() {
 	var usrInput int
 	
 	fmt.Println("Program starting")
-	for i := 0; i < 10; i++ {
+	for i := range 10 {
 		fmt.Printf("Enter Integer (%v/10): ", i + 1)
 		fmt.Scan(&usrInput)
 		integers = append(integers, usrInput)
