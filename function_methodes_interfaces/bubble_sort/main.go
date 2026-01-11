@@ -4,20 +4,6 @@ import (
 	"fmt"
 )
 
-func BubbleSort(numbers []int) {
-	length := len(numbers)
-	for i := 1; i < length; i++ {
-		for j := 0; j < (length - 1); j++ {
-			if numbers[j] > numbers[j+1] {
-				Swap(numbers, j)
-			}
-		}
-	}
-}
-
-func Swap(numbers []int, i int){
-	numbers[i], numbers[i+1] = numbers[i+1], numbers[i]
-}
 
 func main() {
 	integers := make([]int, 0)
@@ -33,4 +19,19 @@ func main() {
 		integers = append(integers, usrInput)
 	}
 	fmt.Println("final Slice of integers: ", integers)
+}
+
+func BubbleSort(numbers []int) {
+	length := len(numbers)
+	for i := 1; i < length; i++ {
+		for j := 0; j < (length - 1); j++ {
+			if numbers[j] > numbers[j+1] {
+				Swap(numbers, j)
+			}
+		}
+	}
+}
+
+func Swap(numbers []int, i int){
+	numbers[i], numbers[i+1] = numbers[i+1], numbers[i]
 }
