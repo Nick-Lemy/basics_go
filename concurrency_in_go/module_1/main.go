@@ -8,12 +8,17 @@ import (
 var counter int
 
 func increment() {
+	fmt.Println("Printint increment 1")
     counter++
+}
+func increment2() {
+	fmt.Println("Printing increment 2")
+	counter++
 }
 
 func main() {
     go increment()
-    go increment()
+    go increment2()
 
     time.Sleep(1 * time.Second)
     fmt.Println("Counter:", counter)
